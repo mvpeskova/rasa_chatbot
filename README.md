@@ -72,4 +72,3 @@ In Terminal 3:
 7. "Get the list of partner universities"
 - intents: partner_universities, input_country
 - actions: action_inquire_universities, utter_ask_country
-- 
