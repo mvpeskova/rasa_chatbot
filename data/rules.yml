@@ -1,0 +1,89 @@
+version: "3.1"
+
+rules:
+
+- rule: always greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: always ask user if they need help with anything after they give feedback about the reply
+  steps:
+    - intent: user_feedback
+    - action: utter_can_I_help
+
+- rule:
+  steps:
+    - intent: deny
+    - action: utter_goodbye
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: ask about the country after the user asks about partner universities
+  steps:
+    - intent: partner_universities
+    - action: utter_ask_country
+
+- rule: output universities for the country entered
+  steps:
+      - intent: input_country
+      - action: action_inquire_universities
+
+- rule: output requirements for a certain scholarship when is asked to
+  steps:
+    - intent: input_scholarship
+    - action: action_inquire_scholarship
+
+- rule: ask about which way a user want to apply for a study abroad
+  steps:
+    - intent: exchange_semester_question
+    - action: utter_exchange_semester
+
+- rule: always give options of applying
+  steps:
+    - intent: input_semester
+    - action: action_semester_abroad
+
+- rule: list the events
+  steps:
+    - intent: input_language
+    - action: action_get_event
+
+- rule: always ask about credit transfer options
+  steps:
+    - intent: transfer_credits_questions
+    - action: utter_transfer_credits
+
+- rule: always reply when the user gives the option for the transfer of credits
+  steps:
+    - intent: input_transfer_credits_option
+    - action: action_transfer_credits
+
+- rule: when the user asks about summer schools, provide details about them
+  steps:
+    - intent: summer_school_questions
+    - action: action_summer_schools
+
+- rule: when the user enter the summer school name, reply with information about this summer school
+  steps:
+    - intent: input_summer_school
+    - action: action_summer_school_info
+
+- rule: always provide information about internship abroad
+  steps:
+    - intent: internship_general_questions
+    - action: utter_internship
+
+- rule: always output information about specified document
+  steps:
+    - intent: specify_document
+    - action: action_inquire_document
+

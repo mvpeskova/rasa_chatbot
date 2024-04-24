@@ -1,0 +1,143 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - partner_universities
+  - input_country
+  - thank
+  - scholarships_general
+  - input_scholarship
+  - exchange_semester_question
+  - input_semester
+  - internship_general_questions
+  - specify_document
+  - transfer_credits_questions
+  - input_transfer_credits_option
+  - summer_school_questions
+  - input_summer_school
+  - request_event
+  - input_language
+  - user_feedback
+
+entities:
+  - university_options
+  - country
+  - scholarships
+  - scholarship_option
+  - going_abroad
+  - apply_option
+  - internship
+  - document
+  - language
+  - transfer_credits
+  - transfer_credits_option
+  - summer_schools
+  - summer_school_option
+
+actions:
+  - action_inquire_universities
+  - action_hello_world
+  - action_inquire_scholarship
+  - action_inquire_document
+  - action_semester_abroad
+  - action_transfer_credits
+  - action_summer_schools
+  - action_summer_school_info
+  - action_get_event
+
+responses:
+  utter_greet:
+  - text: "Hello, I am here to answer all your Study & Work abroad questions!
+  \ \nWhat would you like to know about?
+  \ \n- Events
+  \ \n- Study semester abroad
+  \ \n- Internship abroad
+  \ \n- Summer schools
+  \ \n- Scholarships & funds
+  \ \n- Partner universities worldwide
+  \ \n- Transfer of credits"
+
+  utter_goodbye:
+    - text: "If you have any more questions in the future, feel free to ask. Goodbye!"
+    - text: "I'm happy to have been of help. Take care and goodbye!"
+    - text: "Wishing you all the best. Goodbye and take care!"
+    - text: "If you ever need assistance again, don't hesitate to reach out. Goodbye!"
+
+  utter_can_I_help:
+    - text: "I'm glad I could help. Can I assist you with anything else?"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_country:
+  - text: "Sure. Which country are you interested in?"
+  - text: "Great choice! Tell me, which country would you like information about?"
+  - text: "I can provide details about partner universities. Just let me know the country you're interested in."
+  - text: "Ready to explore! Please specify the country you want to know more about."
+  - text: "Sure thing! To get started, just let me know the country you're interested in"
+
+  utter_scholarship:
+  - text: "Sure! Are you interested in the DIT scholarship, BAfOG or ERASMUS? 
+  \ \nI can provide information about required 
+  documents for these scholarships."
+  - text: "Are you exploring opportunities with DIT scholarship, BAfOG, or ERASMUS? 
+  \ \nChoose an option and I will share information about required documents for these scholarships."
+  - text: "Have you considered applying for DIT scholarship, BAfOG, or ERASMUS? 
+  \ \nI can supply details regarding the 
+  necessary paperwork for these scholarships."
+  - text: "Would you like to get more information about DIT scholarship, BAfOG, or ERASMUS opportunities? 
+  \ \nI have the information needed about the required documents for these scholarships."
+  - text: "Sure! Do you want to learn about DIT, BAfOG, or ERASMUS scholarship documents?"
+
+  utter_exchange_semester:
+  - text: "Are you interested in pursuing a semester abroad through one of our partner universities, or do you prefer 
+  applying independently? 
+  \ \nI have the information needed about the required documents"
+  - text: "Would you consider a semester abroad through a partner university, or do you lean towards applying 
+  independently? 
+  \ \nEither way, I can provide a list of required documents"
+  - text: "Are you considering a partner university, or are you thinking of applying independently? 
+  \ \nChoose an option 
+  and I will share information about required documents"
+  - text: "Do you plan to apply to a partner university or independently? 
+  \ \nI can give you a list of required documents for both options."
+  - text: "Do you want to go to one of the partner universities or to others, by applying independently? 
+  \ \nI can help you  with the documents you need for applying both ways."
+
+  utter_internship:
+  - text: "Just as for a standard internship, first, you need to submit a contract with a company or another organization that offers an international internship in Primuss.
+    \ \nOnce the internship has ended, the following documents need to be uploaded in Primuss:
+    \ \n- written report of the internship
+    \ \n- letter of reference/testimonial from the training
+    \ \nPlease let me know which document you want to know more about: contract, report, or a letter of reference"
+  - text: "Similar to a regular internship, the initial step involves submitting a contract with a company or organization providing an international internship through Primuss. 
+  \ \nAfter the internship concludes, you must upload the following documents in Primuss: 
+  \ \n- written internship report 
+  \ \n- letter of reference/testimonial from the training.
+  \ \nPlease let me know which document you want to know more about: contract, report, or a letter of reference"
+  - text: "As with a typical internship, the initial step for an international internship is to submit a contract with a company or organization through Primuss. 
+  \ \nFollowing the conclusion of the internship, ensure to upload a written report and a letter of reference/testimonial in Primuss.
+  \ \nPlease let me know which document you want to know more about: contract, report, or a letter of reference"
+
+  utter_transfer_credits:
+    - text: "Would you like to see the list of the necessary documents for the transfer of credits or see the contact people?"
+    - text: "Do you prefer checking out the list of required documents for credit transfer, or would you like information on the contact persons?"
+    - text: "Are you interested in reviewing the documents needed for credit transfer, or would you rather know who to contact?"
+    - text: "Do you want to examine the list of documents essential for credit transfer, or would you prefer details about the individuals to contact?"
+    - text: "Do you wish to see the list of documents necessary for transferring credits, or would you like details about the contact individuals?"
+
+  utter_events:
+    - text: "Are you interested in events that take place in English or German?"
+    - text: "Would you like information on events conducted in English or German?"
+    - text: "Please, choose a language: German, English."
+    - text: "Do you have a preference for events in English or German?"
+    - text: "Sure. Would you like information on German or English events?"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,491 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ja
+    - yeah
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no, thank you
+    - no thanks
+    - no, thanks
+    - No, but thank you!
+    - no, this was it
+    - no, that's all
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: partner_universities
+  examples: |
+    - I would like to explore the list of partner [universities](university_options)
+    - Tell me about the available partner [universities](university_options)
+    - Partner [universities](university_options)
+    - Can you provide information on partner [universities](university_options)?
+    - Show me the list of partner [universities](university_options) you have
+    - What are my options for partner [universities](university_options)?
+    - Any recommendations for partner [universities](university_options)?
+    - I'm interested in the partner [universities](university_options) you offer
+    - Which [universities](university_options) are your partners for study abroad?
+    - Share details about the partner [universities](university_options)
+    - List of [universities](university_options) available for exchange programs
+
+- intent: input_country
+  examples: |
+    - The country I want to go to is [South Korea](country)
+    - [Japan](country)
+    
+
+- lookup: country
+  examples: |
+    - Afghanistan
+    - Albania
+    - Algeria
+    - Andorra
+    - Angola
+    - Antigua and Barbuda
+    - Argentina
+    - Armenia
+    - Australia
+    - Austria
+    - Azerbaijan
+    - Bahamas
+    - Bahrain
+    - Bangladesh
+    - Barbados
+    - Belarus
+    - Belgium
+    - Belize
+    - Benin
+    - Bhutan
+    - Bolivia (Plurinational State of)
+    - Bosnia and Herzegovina
+    - Botswana
+    - Brazil
+    - Brunei Darussalam
+    - Bulgaria
+    - Burkina Faso
+    - Burundi
+    - Cabo Verde
+    - Cambodia
+    - Cameroon
+    - Canada
+    - Central African Republic
+    - Chad
+    - Chile
+    - China
+    - Colombia
+    - Comoros
+    - Congo
+    - Costa Rica
+    - Côte D’Ivoire
+    - Croatia
+    - Cuba
+    - Cyprus
+    - Czech Republic
+    - Democratic People’s Republic of Korea
+    - Democratic Republic of the Congo
+    - Denmark
+    - Djibouti
+    - Dominica
+    - Dominican Republic
+    - Ecuador
+    - Egypt
+    - El Salvador
+    - Equatorial Guinea
+    - Eritrea
+    - Estonia
+    - Eswatini
+    - Ethiopia
+    - Fiji
+    - Finland
+    - France
+    - Gabon
+    - Gambia (Republic of The)
+    - Georgia
+    - Germany
+    - Ghana
+    - Greece
+    - Grenada
+    - Guatemala
+    - Guinea
+    - Guinea Bissau
+    - Guyana
+    - Haiti
+    - Honduras
+    - Hungary
+    - Iceland
+    - India
+    - Indonesia
+    - Iran (Islamic Republic of)
+    - Iraq
+    - Ireland
+    - Israel
+    - Italy
+    - Jamaica
+    - Japan
+    - Jordan
+    - Kazakhstan
+    - Kenya
+    - Kiribati
+    - Kuwait
+    - Kyrgyzstan
+    - Lao People’s Democratic Republic
+    - Latvia
+    - Lebanon
+    - Lesotho
+    - Liberia
+    - Libya
+    - Liechtenstein
+    - Lithuania
+    - Luxembourg
+    - Madagascar
+    - Malawi
+    - Malaysia
+    - Maldives
+    - Mali
+    - Malta
+    - Marshall Islands
+    - Mauritania
+    - Mauritius
+    - Mexico
+    - Micronesia (Federated States of)
+    - Monaco
+    - Mongolia
+    - Montenegro
+    - Morocco
+    - Mozambique
+    - Myanmar
+    - Namibia
+    - Nauru
+    - Nepal
+    - Netherlands
+    - New Zealand
+    - Nicaragua
+    - Niger
+    - Nigeria
+    - North Macedonia
+    - Norway
+    - Oman
+    - Pakistan
+    - Palau
+    - Panama
+    - Papua New Guinea
+    - Paraguay
+    - Peru
+    - Philippines
+    - Poland
+    - Portugal
+    - Qatar
+    - Republic of Korea
+    - Republic of Moldova
+    - Romania
+    - Russian Federation
+    - Rwanda
+    - Saint Kitts and Nevis
+    - Saint Lucia
+    - Saint Vincent and the Grenadines
+    - Samoa
+    - San Marino
+    - Sao Tome and Principe
+    - Saudi Arabia
+    - Senegal
+    - Serbia
+    - Seychelles
+    - Sierra Leone
+    - Singapore
+    - Slovakia
+    - Slovenia
+    - Solomon Islands
+    - Somalia
+    - South Africa
+    - South Sudan
+    - Spain
+    - Sri Lanka
+    - Sudan
+    - Suriname
+    - Sweden
+    - Switzerland
+    - Syrian Arab Republic
+    - Tajikistan
+    - Thailand
+    - Timor-Leste
+    - Togo
+    - Tonga
+    - Trinidad and Tobago
+    - Tunisia
+    - Turkey
+    - Turkmenistan
+    - Tuvalu
+    - Uganda
+    - Ukraine
+    - United Arab Emirates
+    - United Kingdom of Great Britain and Northern Ireland
+    - United Republic of Tanzania
+    - United States of America
+    - Uruguay
+    - Uzbekistan
+    - Vanuatu
+    - Venezuela, Bolivarian Republic of
+    - Viet Nam
+    - Yemen
+    - Zambia
+    - Zimbabwe
+
+
+- intent: scholarships_general
+  examples: |
+    - scholarship
+    - scholarships
+    - I want to ask about [scholarships](scholarships).
+    - Can you provide information on available [scholarships](scholarships)?
+    - I'm interested in learning more about the [scholarships](scholarships).
+    - How can I apply for the [scholarships](scholarships)?
+    - What types of [scholarships](scholarships) are available?
+    - Can you share information about [scholarships](scholarships)?
+    - Could you share details about available [scholarships](scholarships)?
+    - Are there specific [scholarships](scholarships) for international students?
+    - Give me a list of [scholarships](scholarships).
+    - Please, provide information about available [scholarships](scholarships).
+
+- intent: input_scholarship
+  examples: |
+    - dit
+    - bafog
+    - erasmus
+    - I want to learn about [erasmus](scholarship_option).
+    - I'm interested in [BAfOG](scholarship_option).
+    - [dit](scholarship_option) scholarship.
+    - Tell me about [BAfOG](scholarship_option).
+    - [ERASMUS](scholarship_option).
+    - Tell me about [ERASMUS](scholarship_option) opportunities.
+    - [BAfOG](scholarship_option) scholarship details, please.
+    - I want info on [dit](scholarship_option).
+    - [ERASMUS](scholarship_option) scholarship info, please.
+    - [DIT](scholarship_option).
+
+- intent: exchange_semester_question
+  examples: |
+    - semester abroad
+    - abroad
+    - Which documents are required for a [semester abroad](going_abroad)?
+    - I want to do a [semester abroad](going_abroad).
+    - What should I know about going abroad for one [semester](going_abroad)?
+    - I want to apply for a [semester abroad](going_abroad).
+    - [Semester abroad](going_abroad).
+    - I want to go to university abroad as an [exchange](going_abroad) student.
+    - I need to learn about requirements of going abroad as an [exchange](going_abroad) student.
+    - Can you provide information about a [semester abroad](going_abroad)?
+    - I need help regarding [semester abroad](going_abroad).
+    - Tell me about [semester abroad](going_abroad).
+
+- intent: input_semester
+  examples: |
+    - I want to apply [independently](apply_option).
+    - [Independently](apply_option).
+    - My choice is to apply [independently](apply_option).
+    - I intend to submit an application [independently](apply_option).
+    - I prefer to go to a [partner](apply_option) university.
+    - I consider applying to one of the [partner](apply_option) universities.
+    - [Partner](apply_option) university.
+    - I plan to spend a semester in [partner](apply_option) university.
+    - My preference is to attend a [partner](apply_option) university.
+    - I would like to go to [partner](apply_option) university.
+
+- intent: internship_general_questions
+  examples : |
+    - internship
+    - internships
+    - Which documents do I need for completing [internship](internship) abroad?
+    - What should I know about [internship](internship) abroad?
+    - Provide me information about [internship](internship) abroad.
+    - I want to learn about completing [internship](internship) abroad.
+    - Tell me what should I do to complete an [internship](internship) abroad.
+    - What steps and documents are involved in successfully completing an [internship](internship) abroad?
+    - What is needed for an international [internship](internship)?
+    - I intend to complete an [internship](internship) abroad. What should I know?
+    - I would like to know about the process of applying and completing an [internship](internship) abroad.
+    - [Internship](internship) abroad.
+
+- intent: specify_document
+  examples: |
+    - What should I know about a [contract](document)?
+    - What should I include in my [report](document)?
+    - Tell me more about letter of [reference](document).
+    - When it comes to a letter of [reference](document), what details are typically included?
+    - What key points should be highlighted in a letter of [reference](document)?
+    - When preparing my [report](document), what key elements should I focus on?
+    - Regarding my [report](document), what information is vital for a thorough overview?
+    - I want to know more about details of [contract](document).
+    - What is a letter of [reference](document) exactly?
+    - Provide more information about a [report](document) I should write.
+
+
+- intent: transfer_credits_questions
+  examples: |
+    - Provide me information about [transfer of credits](transfer_credits).
+    - How can I [transfer my credits](transfer_credits) after a semester abroad?
+    - What is the process for [transferring credits](transfer_credits) from one university to another?
+    - Can you explain the [credit transfer](transfer_credits) policy at your institution?
+    - How does the [credit transfer](transfer_credits) process work?
+    - I have completed courses at another institution; can you guide me on [how to transfer my credits](transfer_credits) to this university?
+    - What steps do I need to take to initiate the [transfer of credits](transfer_credits) process after studying abroad?
+    - How does the university handle [credit transfers](transfer_credits) for courses taken during a semester abroad?
+    - What are the general steps involved in [transferring credits](transfer_credits) after studying abroad?
+    - Can you provide a brief overview of the [credit transfer](transfer_credits) process for students returning from a semester abroad?
+
+- intent: input_transfer_credits_option
+  examples: |
+    - documents
+    - contact
+    - Is there a list of [documents](transfer_credits_option) that students must complete for credit transfers?
+    - Can you explain the [documents](transfer_credits_option) for credit transfers?
+    - What [documents](transfer_credits_option) do I need to submit to initiate the credit transfer process?
+    - Are there specific [documents](transfer_credits_option) that need to be filled out for transferring credits?
+    - Are there any [documents](transfer_credits_option) for documentation when transferring credits after a semester abroad?
+    - Can I have the [contact](transfer_credits_option)s for the credit transfer office?
+    - Who should I [contact](transfer_credits_option) regarding credit transfers at the university?
+    - How can I [contact](transfer_credits_option) someone for assistance with credit transfers?
+    - Can you share the [contact](transfer_credits_option)s of the staff responsible for credit transfer inquiries?
+    - I need assistance, who are the the [contact](transfer_credits_option) people for the department handling credit transfers after a semester abroad?
+
+- intent: request_event
+  examples: |
+    - I want to learn about future events.
+    - Provide a list of events.
+    - Give me a list of events.
+    - Could you tell me about upcoming events?
+    - Inform me about upcoming events
+    - Provide a list of events that will take place soon.
+    - Can you list some events that are set to happen in the coming months?
+    - Give me a preview of upcoming events.
+    - Share some information about future events.
+    - Events.
+    - I'm interested in knowing what events are coming up.
+
+- intent: input_language
+  examples: |
+    - [German](language).
+    - [English](language).
+    - I want to learn about events in English.
+    - Please provide information about German language events.
+    - Share details on events held in the English language.
+    - I'm interested in events that are conducted in German.
+    - Can you give me insights into upcoming events in English?
+    - I'd like to stay informed about events conducted in German.
+    - I'd like to know about events that are in the English language.
+    - My preference is to learn about events that are in the German language.
+
+- synonym: documents
+  examples: |
+    - required documents
+    - required paperwork
+    - forms
+    - specific requirements
+
+- synonym: contact
+  examples: |
+    - contact information
+    - get in touch with
+    - reach out
+    - names and titles
+    - contact people
+
+- intent: summer_school_questions
+  examples: |
+    - What [summer schools](summer_schools) are there?
+    - Could you please give the list of [summer schools](summer_schools)
+    - [summer schools](summer_schools)
+    - summer schools
+    - summer school
+
+- intent: input_summer_school
+  examples: |
+    - [The Next / The Young Global Leaders Camp](summer_school_option)
+    - [Swarm Master: Drone Fleet Commander Bootcamp](summer_school_option)
+    - [Fulbright Summer Scholarship Program "Diversity Initative 2024"](summer_school_option)
+    - [Time Capsule of Latvian Footprints](summer_school_option)
+    - [Intensive English and Cross-Cultural Communication](summer_school_option)
+    - [Fulbright Summer Scholarship Program "Leaders in Entrepreneurship"](summer_school_option)
+    - [Nanophotonics: Close up for the future](summer_school_option)
+    - [Easter Spring School - Delightful Cappadocia](summer_school_option)
+    - [CERN Summer Student Programme](summer_school_option)
+    - [Summer School IDRAC Summer Session](summer_school_option)
+    -  I'm interested in [The Next / The Young Global Leaders Camp](summer_school_option) summer school
+    - [Swarm Master: Drone Fleet Commander Bootcamp](summer_school_option)
+    - I want to know about the [Nanophotonics: Close up for the future](summer_school_option) summer school
+    - [Summer School IDRAC Summer Session](summer_school_option)
+
+- lookup: summer_school_option
+  examples: |
+    - The Next / The Young Global Leaders Camp
+    - Swarm Master: Drone Fleet Commander Bootcamp
+    - Fulbright Summer Scholarship Program "Diversity Initative 2024"
+    - Time Capsule of Latvian Footprints
+    - Intensive English and Cross-Cultural Communication
+    - Fulbright Summer Scholarship Program "Leaders in Entrepreneurship"
+    - Nanophotonics: Close up for the future
+    - Easter Spring School - Delightful Cappadocia - 30.03.24 to 06.04.2024
+    - CERN Summer Student Programme - Juni bis September
+    - Summer School IDRAC Summer Session
+
+- intent: user_feedback
+  examples: |
+    - thank you!
+    - Thanks, that was very helpful
+    - ty
+    - thx
+    - thanks
+    - I see
+    - ok
+    - okay
+    - thank you so much!
+    

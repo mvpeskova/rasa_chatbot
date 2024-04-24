@@ -1,0 +1,102 @@
+version: "3.1"
+
+stories:
+
+- story: ask for partner universities
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: partner_universities
+      entities:
+        - universities
+    - action: utter_ask_country
+    - intent: input_country
+      entities:
+        - country
+    - action: action_inquire_universities
+    - intent: user_feedback
+    - action: utter_can_I_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: ask about scholarships
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: scholarships_general
+    - action: utter_scholarship
+    - intent: input_scholarship
+    - action: action_inquire_scholarship
+    - intent: user_feedback
+    - action: utter_can_I_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: ask about semester abroad
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: exchange_semester_question
+    - action: utter_exchange_semester
+    - intent: input_semester
+    - action: action_semester_abroad
+    - intent: user_feedback
+    - action: utter_can_I_help
+
+- story: ask about internship abroad
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: internship_general_questions
+    - action: utter_internship
+    - intent: specify_document
+    - action: action_inquire_document
+    - intent: user_feedback
+    - action: utter_can_I_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: ask about transfer of credits
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: transfer_credits_questions
+      entities:
+        - transfer_credits
+    - action: utter_transfer_credits
+    - intent: input_transfer_credits_option
+      entities:
+        - transfer_credits_option
+    - action: action_transfer_credits
+    - intent: user_feedback
+    - action: utter_can_I_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: ask about summer schools
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: summer_school_questions
+    - action: action_summer_schools
+    - intent: input_summer_school
+      entities:
+        - summer_school_option
+    - action: action_summer_school_info
+    - intent: user_feedback
+    - action: utter_can_I_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: learn about events
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: request_event
+    - action: utter_events
+    - intent: input_language
+    - action: action_get_event
+    - intent: user_feedback
+    - action: utter_can_I_help
+    - intent: deny
+    - action: utter_goodbye
